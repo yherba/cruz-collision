@@ -1,0 +1,735 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cruz Brothers Collision | Auto Body &amp; Paint in Leon Valley, TX</title>
+  <meta name="description" content="Family-run auto body and paint shop in Leon Valley, San Antonio. Collision repair, paintless dent repair, paint and refinishing, frame straightening and bumper repair. Free estimates. Se habla español.">
+  <meta property="og:title" content="Cruz Brothers Collision">
+  <meta property="og:description" content="Auto body &amp; paint in Leon Valley, TX. Free estimates, by appointment. Se habla español.">
+  <meta property="og:image" content="images/flames-hood.jpg">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#14161a">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2314161a'/%3E%3Ctext x='32' y='44' font-family='Arial Black,Arial' font-weight='900' font-size='30' text-anchor='middle' fill='%23ff8a1f'%3ECB%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoBodyShop",
+    "name": "Cruz Brothers Collision",
+    "telephone": "+1-210-508-6225",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "7322 Reindeer Trail",
+      "addressLocality": "Leon Valley",
+      "addressRegion": "TX",
+      "postalCode": "78238",
+      "addressCountry": "US"
+    },
+    "areaServed": "San Antonio, TX",
+    "knowsLanguage": ["en", "es"]
+  }
+  </script>
+  <style>
+    :root {
+      --ink: #14161a;
+      --ink-2: #1d2026;
+      --ink-3: #2a2e36;
+      --paper: #f6f4f0;
+      --card: #ffffff;
+      --text: #1b1d22;
+      --muted: #5d636e;
+      --line: #e3dfd7;
+      --flame: #ff8a1f;
+      --flame-2: #ffc21a;
+      --candy: #1e4fd6;
+      --tbd-bg: #fff4c2;
+      --tbd-text: #6b5300;
+      --radius: 14px;
+      --max: 1120px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--text);
+      font: 400 17px/1.6 Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
+    h1, h2, h3 {
+      font-family: Oswald, Impact, "Arial Narrow", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: .01em;
+      line-height: 1.05;
+      margin: 0 0 .5em;
+    }
+    h2 { font-size: clamp(2rem, 4.5vw, 2.9rem); }
+    h3 { font-size: 1.3rem; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+    section { padding: 88px 0; }
+    .eyebrow {
+      display: inline-block;
+      font: 600 .8rem/1 Inter, sans-serif;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--flame);
+      margin-bottom: 14px;
+    }
+    .lede { font-size: 1.1rem; color: var(--muted); max-width: 640px; }
+
+    /* "To confirm" markers: easy to find, easy to delete once confirmed */
+    .tbd {
+      display: inline-block;
+      background: var(--tbd-bg);
+      color: var(--tbd-text);
+      border: 1px dashed #d9b400;
+      border-radius: 6px;
+      padding: 1px 8px;
+      font: 600 .72rem/1.6 Inter, sans-serif;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      vertical-align: middle;
+      white-space: normal;
+    }
+    .draft-bar {
+      background: var(--tbd-bg);
+      color: var(--tbd-text);
+      font-size: .85rem;
+      text-align: center;
+      padding: 8px 20px;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font: 600 1rem/1 Inter, sans-serif;
+      padding: 15px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      border: 2px solid transparent;
+      transition: transform .15s ease, background .15s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn svg { width: 18px; height: 18px; flex: none; }
+    .btn-primary { background: var(--flame); color: #1a1000; }
+    .btn-primary:hover { background: var(--flame-2); }
+    .btn-ghost { border-color: rgba(255,255,255,.35); color: #fff; }
+    .btn-ghost:hover { background: rgba(255,255,255,.08); }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(20,22,26,.96);
+      backdrop-filter: blur(8px);
+      color: #fff;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .nav { display: flex; align-items: center; gap: 24px; height: 68px; }
+    .brand {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      font-family: Oswald, Impact, sans-serif;
+      text-transform: uppercase;
+      line-height: 1;
+      margin-right: auto;
+    }
+    .brand b { font-size: 1.35rem; font-weight: 700; letter-spacing: .02em; }
+    .brand span { font-size: .78rem; letter-spacing: .32em; color: var(--flame); margin-top: 3px; }
+    .nav-links { display: flex; gap: 22px; }
+    .nav-links a { text-decoration: none; font-size: .92rem; color: rgba(255,255,255,.78); }
+    .nav-links a:hover { color: #fff; }
+    .lang {
+      display: flex;
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .lang button {
+      background: none;
+      border: 0;
+      color: rgba(255,255,255,.7);
+      font: 600 .8rem/1 Inter, sans-serif;
+      padding: 8px 11px;
+      cursor: pointer;
+    }
+    .lang button[aria-pressed="true"] { background: #fff; color: var(--ink); }
+    .nav-call { padding: 11px 16px; font-size: .92rem; }
+
+    /* Hero */
+    .hero {
+      background:
+        radial-gradient(1200px 500px at 85% 10%, rgba(30,79,214,.35), transparent 60%),
+        radial-gradient(700px 400px at 10% 100%, rgba(255,138,31,.18), transparent 60%),
+        var(--ink);
+      color: #fff;
+      padding: 72px 0 88px;
+      overflow: hidden;
+    }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 56px; align-items: center; }
+    .hero h1 { font-size: clamp(2.6rem, 6.4vw, 4.6rem); margin-bottom: 20px; }
+    .hero h1 em {
+      font-style: normal;
+      background: linear-gradient(90deg, var(--flame-2), var(--flame));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .hero p { color: rgba(255,255,255,.78); font-size: 1.15rem; max-width: 540px; margin: 0 0 30px; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 34px; padding: 0; list-style: none; }
+    .chips li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .9rem;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.1);
+    }
+    .chips li::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--flame); }
+    .hero-photo { position: relative; }
+    .hero-photo img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center 40%;
+      border-radius: 22px;
+      box-shadow: 0 30px 80px rgba(0,0,0,.5);
+    }
+    .hero-photo figcaption {
+      position: absolute;
+      left: -18px;
+      bottom: 28px;
+      background: #fff;
+      color: var(--ink);
+      border-radius: 12px;
+      padding: 12px 16px;
+      font-size: .85rem;
+      box-shadow: 0 12px 30px rgba(0,0,0,.3);
+    }
+    .hero-photo figcaption b { display: block; font-family: Oswald, sans-serif; text-transform: uppercase; font-size: 1rem; }
+
+    /* Services */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 16px;
+      margin-top: 40px;
+    }
+    .service {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 26px 22px;
+    }
+    .service .icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: var(--ink);
+      color: var(--flame);
+      margin-bottom: 18px;
+    }
+    .service .icon svg { width: 24px; height: 24px; }
+    .service p { margin: 0; color: var(--muted); font-size: .95rem; }
+
+    /* Work */
+    .work { background: var(--ink); color: #fff; }
+    .work .lede { color: rgba(255,255,255,.7); }
+    .ba {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      grid-auto-rows: clamp(240px, 34vw, 400px);
+      gap: 16px;
+      margin-top: 40px;
+    }
+    .ba figure, .gallery figure { margin: 0; position: relative; }
+    .ba img, .gallery img {
+      min-width: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: var(--radius);
+      cursor: zoom-in;
+    }
+    .ba figure { height: 100%; }
+    .tag {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(0,0,0,.72);
+      color: #fff;
+      font: 600 .75rem/1 Inter, sans-serif;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      padding: 8px 12px;
+      border-radius: 999px;
+    }
+    .tag.after { background: var(--flame); color: #1a1000; }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .gallery figure { aspect-ratio: 1; }
+    .gallery figcaption {
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      padding: 40px 16px 14px;
+      font-size: .9rem;
+      border-radius: 0 0 var(--radius) var(--radius);
+      background: linear-gradient(transparent, rgba(0,0,0,.8));
+      pointer-events: none;
+    }
+    .more-photos { margin-top: 22px; color: rgba(255,255,255,.6); font-size: .95rem; }
+
+    /* About */
+    .about-grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 56px; align-items: center; }
+    .about-photo img { border-radius: 22px; aspect-ratio: 4 / 5; object-fit: cover; width: 100%; }
+    .points { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 30px; }
+    .point { border-left: 3px solid var(--flame); padding-left: 16px; }
+    .point h3 { font-size: 1.05rem; margin-bottom: 4px; }
+    .point p { margin: 0; color: var(--muted); font-size: .95rem; }
+
+    /* Insurance */
+    .insurance { background: #ece8e1; }
+    .ins-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: clamp(28px, 5vw, 52px);
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 40px;
+    }
+    .steps { list-style: none; counter-reset: s; margin: 0; padding: 0; display: grid; gap: 18px; }
+    .steps li { counter-increment: s; display: grid; grid-template-columns: 40px 1fr; gap: 14px; align-items: start; }
+    .steps li::before {
+      content: counter(s);
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      display: grid; place-items: center;
+      background: var(--ink); color: var(--flame);
+      font: 700 1.1rem/1 Oswald, sans-serif;
+    }
+    .steps b { display: block; }
+    .steps span { color: var(--muted); font-size: .95rem; }
+
+    /* Contact */
+    .contact-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 32px; margin-top: 36px; }
+    .info { display: grid; gap: 14px; align-content: start; }
+    .info-row {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      display: grid;
+      grid-template-columns: 26px 1fr;
+      gap: 14px;
+    }
+    .info-row svg { width: 22px; height: 22px; color: var(--flame); margin-top: 2px; }
+    .info-row small { display: block; text-transform: uppercase; letter-spacing: .12em; font-size: .72rem; font-weight: 600; color: var(--muted); }
+    .info-row a { font-weight: 600; text-decoration: none; }
+    .info-row a:hover { text-decoration: underline; }
+    .map {
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      min-height: 360px;
+      background: #ddd;
+    }
+    .map-col { display: grid; gap: 12px; grid-template-rows: 1fr auto; }
+    .map iframe { width: 100%; height: 100%; min-height: 360px; border: 0; display: block; }
+    .directions { justify-self: start; background: var(--ink); color: #fff; }
+    .directions:hover { background: var(--ink-3); }
+
+    footer { background: var(--ink); color: rgba(255,255,255,.6); font-size: .9rem; padding: 36px 0 40px; }
+    .foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+    footer a { color: #fff; text-decoration: none; }
+
+    /* Mobile call bar */
+    .callbar { display: none; }
+
+    /* Lightbox */
+    dialog.lightbox {
+      border: 0;
+      padding: 0;
+      background: transparent;
+      max-width: min(92vw, 900px);
+      max-height: 90vh;
+    }
+    dialog.lightbox::backdrop { background: rgba(0,0,0,.85); }
+    dialog.lightbox img { max-height: 86vh; width: auto; margin: 0 auto; border-radius: 10px; }
+    dialog.lightbox button {
+      position: fixed; top: 16px; right: 16px;
+      width: 44px; height: 44px; border-radius: 50%;
+      border: 0; background: #fff; color: var(--ink);
+      font-size: 1.4rem; cursor: pointer;
+    }
+
+    @media (max-width: 960px) {
+      .nav-links { display: none; }
+      .hero-grid, .about-grid, .ins-card, .contact-grid { grid-template-columns: 1fr; }
+      .hero-photo { max-width: 420px; }
+      .hero-photo figcaption { left: 12px; }
+      .about-photo { max-width: 420px; }
+    }
+    @media (max-width: 640px) {
+      body { font-size: 16px; }
+      section { padding: 64px 0; }
+      .hero { padding: 48px 0 64px; }
+      .nav { gap: 12px; }
+      .nav-call { display: none; }
+      .brand b { font-size: 1.15rem; }
+      .ba, .gallery, .points { grid-template-columns: 1fr; }
+      .ba { grid-auto-rows: auto; }
+      .ba figure { aspect-ratio: 4 / 3; }
+      .gallery figure { aspect-ratio: 4 / 3; }
+      .callbar {
+        display: flex;
+        position: fixed;
+        left: 12px; right: 12px; bottom: 12px;
+        z-index: 30;
+        justify-content: center;
+        box-shadow: 0 10px 30px rgba(0,0,0,.35);
+      }
+      footer { padding-bottom: 100px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .btn { transition: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="draft-bar" data-i18n="draft">Draft preview: items marked <span class="tbd">To confirm</span> still need details from Cruz Brothers.</div>
+
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="Cruz Brothers Collision, home">
+        <b>Cruz Brothers</b>
+        <span>Collision</span>
+      </a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="#services" data-i18n="nav_services">Services</a>
+        <a href="#work" data-i18n="nav_work">Our Work</a>
+        <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#insurance" data-i18n="nav_insurance">Insurance</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+      </nav>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="es" aria-pressed="false">ES</button>
+      </div>
+      <a class="btn btn-primary nav-call" href="tel:+12105086225">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+        (210) 508-6225
+      </a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow" data-i18n="hero_eyebrow">Auto Body &amp; Paint · Leon Valley, TX</span>
+          <h1 data-i18n="hero_title">Back on the road, <em>looking right.</em></h1>
+          <p data-i18n="hero_body">Family-run collision repair serving Leon Valley and San Antonio. From fender benders to full refinishing, the Cruz brothers treat every car like it's their own.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="tel:+12105086225">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+              <span data-i18n="cta_call">Call for a free estimate</span>
+            </a>
+            <a class="btn btn-ghost" href="#work" data-i18n="cta_work">See our work</a>
+          </div>
+          <ul class="chips">
+            <li data-i18n="chip_free">Free estimates</li>
+            <li data-i18n="chip_appt">By appointment</li>
+            <li data-i18n="chip_lang">English &amp; Español</li>
+          </ul>
+        </div>
+        <figure class="hero-photo">
+          <img src="images/flames-hood.jpg" alt="Custom blue and orange flame paint job on a classic Oldsmobile hood" width="344" height="691">
+          <figcaption><b data-i18n="hero_cap_t">Custom paint</b><span data-i18n="hero_cap_s">Hand-laid flames on a classic Olds</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <span class="eyebrow" data-i18n="svc_eyebrow">What we do</span>
+        <h2 data-i18n="svc_title">Services</h2>
+        <p class="lede" data-i18n="svc_lede">Whatever happened to your vehicle, we'll take a look and give you an honest, free estimate.</p>
+        <div class="services-grid">
+          <article class="service">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 17H3v-5l2-5h11l4 5h1v5h-2"/><circle cx="7.5" cy="17" r="2"/><circle cx="16.5" cy="17" r="2"/><path d="M9.5 17h5"/></svg></div>
+            <h3 data-i18n="s1_t">Collision Repair</h3>
+            <p data-i18n="s1_d">Accident damage repaired and restored to pre-accident condition, big or small.</p>
+          </article>
+          <article class="service">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12c3-4 6-4 9 0s6 4 9 0"/><path d="M12 3v4M12 17v4"/></svg></div>
+            <h3 data-i18n="s2_t">Paintless Dent Repair</h3>
+            <p data-i18n="s2_d">Dings and dents pulled out without repainting, keeping your factory finish.</p>
+          </article>
+          <article class="service">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h12v5H4z"/><path d="M16 6h3v5h-8v3"/><path d="M10 14h2v7h-2z"/></svg></div>
+            <h3 data-i18n="s3_t">Paint &amp; Refinishing</h3>
+            <p data-i18n="s3_d">Color-matched paint, clear coat and polish, from a single panel to custom work.</p>
+          </article>
+          <article class="service">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 12h18M12 3v18"/></svg></div>
+            <h3 data-i18n="s4_t">Frame Straightening</h3>
+            <p data-i18n="s4_d">Getting the structure back to spec so your car drives straight and safe.</p>
+          </article>
+          <article class="service">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 14h20v3a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/><path d="M5 14l2-4h10l2 4"/></svg></div>
+            <h3 data-i18n="s5_t">Bumper Repair</h3>
+            <p data-i18n="s5_d">Cracks, scuffs and dents in bumpers repaired and refinished, or replaced.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="work">
+      <div class="wrap">
+        <span class="eyebrow" data-i18n="work_eyebrow">Recent jobs</span>
+        <h2 data-i18n="work_title">Our Work</h2>
+        <p class="lede" data-i18n="work_lede">A few jobs from our shop. Tap any photo to see it larger.</p>
+
+        <div class="ba">
+          <figure>
+            <img src="images/outlander-before.jpg" alt="Red SUV with front-end collision damage, hood up, fender crushed" loading="lazy">
+            <span class="tag" data-i18n="before">Before</span>
+          </figure>
+          <figure>
+            <img src="images/outlander-after.jpg" alt="Same red SUV with front end fully repaired and repainted" loading="lazy">
+            <span class="tag after" data-i18n="after">After</span>
+          </figure>
+        </div>
+
+        <div class="gallery">
+          <figure>
+            <img src="images/collage-6.jpg" alt="Black SUV rear door and quarter panel: dent, bodywork, primer, and finished glossy result" loading="lazy">
+            <figcaption data-i18n="g1">Door &amp; quarter panel, start to finish</figcaption>
+          </figure>
+          <figure>
+            <img src="images/collage-7.jpg" alt="Red Ram pickup bumper: damaged, masked for paint, and repaired" loading="lazy">
+            <figcaption data-i18n="g2">Ram bumper repair</figcaption>
+          </figure>
+          <figure>
+            <img src="images/collage-5.jpg" alt="Dark minivan rear hatch and side door in primer and after final paint" loading="lazy">
+            <figcaption data-i18n="g3">Minivan hatch &amp; side refinish</figcaption>
+          </figure>
+        </div>
+        <p class="more-photos" data-i18n="more_photos">More photos coming soon.</p>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap about-grid">
+        <figure class="about-photo" style="margin:0">
+          <img src="images/polishing.jpg" alt="Cruz Brothers technician polishing a freshly painted flame hood outside the shop" loading="lazy">
+        </figure>
+        <div>
+          <span class="eyebrow" data-i18n="about_eyebrow">About us</span>
+          <h2 data-i18n="about_title">Two brothers. One standard.</h2>
+          <p class="lede" data-i18n="about_body">Cruz Brothers Collision is a family-owned body and paint shop in Leon Valley, run by brothers Al and Steve Cruz. We do the work ourselves, take our time on the details, and stand behind the finish.</p>
+          <p><span class="tbd" data-i18n="tbd_story">To confirm: years in business &amp; story</span></p>
+          <div class="points">
+            <div class="point">
+              <h3 data-i18n="p1_t">Free estimates</h3>
+              <p data-i18n="p1_d">Call to set up a time and we'll look over the damage at no cost.</p>
+            </div>
+            <div class="point">
+              <h3 data-i18n="p2_t">Se habla español</h3>
+              <p data-i18n="p2_d">We're happy to help you in English or Spanish.</p>
+            </div>
+            <div class="point">
+              <h3 data-i18n="p3_t">Hands-on owners</h3>
+              <p data-i18n="p3_d">You talk to the people actually fixing your car.</p>
+            </div>
+            <div class="point">
+              <h3 data-i18n="p4_t">Quality finish</h3>
+              <p data-i18n="p4_d">Careful prep, color matching and polish on every job. <span class="tbd">To confirm: warranty?</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="insurance" class="insurance">
+      <div class="wrap">
+        <div class="ins-card">
+          <div>
+            <span class="eyebrow" data-i18n="ins_eyebrow">Insurance claims</span>
+            <h2 data-i18n="ins_title">Working with your insurance</h2>
+            <p class="lede" data-i18n="ins_body">Dealing with an accident is stressful enough. Bring us your claim information and we'll help you through the repair process.</p>
+            <p><span class="tbd" data-i18n="tbd_ins">To confirm: which insurance companies we work with</span></p>
+          </div>
+          <ol class="steps">
+            <li><div><b data-i18n="st1_t">Call us</b><span data-i18n="st1_d">Set up a time for a free estimate.</span></div></li>
+            <li><div><b data-i18n="st2_t">Get your estimate</b><span data-i18n="st2_d">We inspect the damage and walk you through the repair.</span></div></li>
+            <li><div><b data-i18n="st3_t">We get to work</b><span data-i18n="st3_d">Bodywork, paint and finish, done right.</span></div></li>
+            <li><div><b data-i18n="st4_t">Drive away happy</b><span data-i18n="st4_d">Pick up your car looking like nothing happened.</span></div></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <span class="eyebrow" data-i18n="ct_eyebrow">Visit or call</span>
+        <h2 data-i18n="ct_title">Contact</h2>
+        <p class="lede" data-i18n="ct_lede">We work by appointment, so please call before coming by.</p>
+        <div class="contact-grid">
+          <div class="info">
+            <div class="info-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+              <div><small data-i18n="lbl_phone">Phone</small><a href="tel:+12105086225">(210) 508-6225</a></div>
+            </div>
+            <div class="info-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.3 7-12a7 7 0 0 0-14 0c0 5.7 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <div><small data-i18n="lbl_address">Address</small>
+                <a href="https://www.google.com/maps/dir/?api=1&amp;destination=7322+Reindeer+Trail%2C+Leon+Valley%2C+TX+78238" target="_blank" rel="noopener">7322 Reindeer Trail<br>Leon Valley, TX 78238</a>
+              </div>
+            </div>
+            <div class="info-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              <div><small data-i18n="lbl_hours">Hours</small>
+                <span data-i18n="hours">By appointment only</span><br>
+                <span class="tbd" data-i18n="tbd_hours">To confirm: regular hours</span>
+              </div>
+            </div>
+            <div class="info-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H8l-4 4z"/></svg>
+              <div><small data-i18n="lbl_lang">Languages</small><span>English · Español</span></div>
+            </div>
+          </div>
+          <div class="map-col">
+          <div class="map">
+            <iframe title="Map to Cruz Brothers Collision" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=7322+Reindeer+Trail,+Leon+Valley,+TX+78238&amp;output=embed"></iframe>
+          </div>
+          <a class="btn directions" href="https://www.google.com/maps/dir/?api=1&amp;destination=7322+Reindeer+Trail%2C+Leon+Valley%2C+TX+78238" target="_blank" rel="noopener" data-i18n="directions">Get directions</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <span>© <span id="year">2026</span> Cruz Brothers Collision · Leon Valley, TX</span>
+      <a href="tel:+12105086225">(210) 508-6225</a>
+    </div>
+  </footer>
+
+  <a class="btn btn-primary callbar" href="tel:+12105086225">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+    <span data-i18n="callbar">Call (210) 508-6225</span>
+  </a>
+
+  <dialog class="lightbox" aria-label="Photo">
+    <button type="button" aria-label="Close">×</button>
+    <img alt="">
+  </dialog>
+
+  <script>
+    // Spanish copy. English lives in the HTML itself and is captured on load.
+    const ES = {
+      draft: 'Vista previa: los puntos marcados <span class="tbd">Por confirmar</span> aún necesitan detalles de Cruz Brothers.',
+      nav_services: 'Servicios', nav_work: 'Trabajos', nav_about: 'Nosotros', nav_insurance: 'Seguros', nav_contact: 'Contacto',
+      hero_eyebrow: 'Hojalatería y Pintura · Leon Valley, TX',
+      hero_title: 'De vuelta en el camino, <em>como nuevo.</em>',
+      hero_body: 'Taller familiar de reparación de colisiones en Leon Valley y San Antonio. Desde golpes pequeños hasta pintura completa, los hermanos Cruz tratan cada carro como si fuera suyo.',
+      cta_call: 'Llame para un presupuesto gratis', cta_work: 'Vea nuestro trabajo',
+      chip_free: 'Presupuestos gratis', chip_appt: 'Con cita', chip_lang: 'English y Español',
+      hero_cap_t: 'Pintura personalizada', hero_cap_s: 'Flamas a mano en un Olds clásico',
+      svc_eyebrow: 'Lo que hacemos', svc_title: 'Servicios',
+      svc_lede: 'Sea lo que sea que le pasó a su vehículo, lo revisamos y le damos un presupuesto honesto y gratis.',
+      s1_t: 'Reparación de Colisiones', s1_d: 'Reparamos daños de accidentes y dejamos su vehículo como estaba, grande o pequeño.',
+      s2_t: 'Sacabollos sin Pintura', s2_d: 'Quitamos abolladuras sin repintar, conservando la pintura de fábrica.',
+      s3_t: 'Pintura y Acabado', s3_d: 'Pintura igualada al color, barniz y pulido, desde un panel hasta trabajos personalizados.',
+      s4_t: 'Enderezado de Chasis', s4_d: 'Regresamos la estructura a especificación para que su carro maneje derecho y seguro.',
+      s5_t: 'Reparación de Defensas', s5_d: 'Grietas, raspones y golpes en defensas reparados y pintados, o reemplazados.',
+      work_eyebrow: 'Trabajos recientes', work_title: 'Nuestro Trabajo',
+      work_lede: 'Algunos trabajos de nuestro taller. Toque una foto para verla más grande.',
+      before: 'Antes', after: 'Después',
+      g1: 'Puerta y costado, de principio a fin', g2: 'Reparación de defensa Ram', g3: 'Puerta trasera y costado de minivan',
+      more_photos: 'Más fotos muy pronto.',
+      about_eyebrow: 'Nosotros', about_title: 'Dos hermanos. Un solo estándar.',
+      about_body: 'Cruz Brothers Collision es un taller familiar de hojalatería y pintura en Leon Valley, a cargo de los hermanos Al y Steve Cruz. Hacemos el trabajo nosotros mismos, cuidamos los detalles y respaldamos el acabado.',
+      tbd_story: 'Por confirmar: años en el negocio e historia',
+      p1_t: 'Presupuestos gratis', p1_d: 'Llame para hacer una cita y revisamos el daño sin costo.',
+      p2_t: 'Se habla español', p2_d: 'Con gusto le atendemos en inglés o en español.',
+      p3_t: 'Dueños presentes', p3_d: 'Usted habla con las personas que de verdad reparan su carro.',
+      p4_t: 'Acabado de calidad', p4_d: 'Preparación cuidadosa, igualado de color y pulido en cada trabajo. <span class="tbd">Por confirmar: ¿garantía?</span>',
+      ins_eyebrow: 'Reclamos de seguro', ins_title: 'Trabajamos con su seguro',
+      ins_body: 'Un accidente ya es bastante estresante. Traiga la información de su reclamo y le ayudamos durante todo el proceso de reparación.',
+      tbd_ins: 'Por confirmar: con qué aseguradoras trabajamos',
+      st1_t: 'Llámenos', st1_d: 'Haga una cita para un presupuesto gratis.',
+      st2_t: 'Reciba su presupuesto', st2_d: 'Revisamos el daño y le explicamos la reparación.',
+      st3_t: 'Manos a la obra', st3_d: 'Hojalatería, pintura y acabado, bien hechos.',
+      st4_t: 'Llévese su carro', st4_d: 'Recoja su carro como si nada hubiera pasado.',
+      ct_eyebrow: 'Visítenos o llame', ct_title: 'Contacto',
+      ct_lede: 'Trabajamos con cita, así que por favor llame antes de venir.',
+      lbl_phone: 'Teléfono', lbl_address: 'Dirección', lbl_hours: 'Horario', lbl_lang: 'Idiomas',
+      hours: 'Solo con cita', tbd_hours: 'Por confirmar: horario regular',
+      directions: 'Cómo llegar',
+      callbar: 'Llamar (210) 508-6225'
+    };
+
+    const nodes = document.querySelectorAll('[data-i18n]');
+    const EN = {};
+    nodes.forEach(n => { EN[n.dataset.i18n] = n.innerHTML; });
+    const buttons = document.querySelectorAll('.lang button');
+
+    function setLang(lang) {
+      const dict = lang === 'es' ? ES : EN;
+      nodes.forEach(n => {
+        const v = dict[n.dataset.i18n];
+        if (v !== undefined) n.innerHTML = v;
+      });
+      document.documentElement.lang = lang;
+      buttons.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
+      try { localStorage.setItem('lang', lang); } catch (e) {}
+    }
+
+    buttons.forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
+    let saved = null;
+    try { saved = localStorage.getItem('lang'); } catch (e) {}
+    if (saved === 'es') setLang('es');
+
+    // Simple photo lightbox
+    const box = document.querySelector('dialog.lightbox');
+    const boxImg = box.querySelector('img');
+    document.querySelectorAll('.ba img, .gallery img').forEach(img => {
+      img.addEventListener('click', () => {
+        boxImg.src = img.src;
+        boxImg.alt = img.alt;
+        box.showModal();
+      });
+    });
+    box.querySelector('button').addEventListener('click', () => box.close());
+    box.addEventListener('click', e => { if (e.target === box) box.close(); });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
